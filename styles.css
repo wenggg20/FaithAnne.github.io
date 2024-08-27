@@ -1,0 +1,94 @@
+body {
+    font-family: 'Lobster', cursive; /* Custom font for a unique look */
+    background: linear-gradient(135deg, #ffe6f0, #ffccf2); /* Gradient background */
+    color: #8b004b; /* Darker pink for text */
+    margin: 0;
+    padding: 0;
+}
+
+/* General Layout */
+.header {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #ff4d88, #ff80aa); /* Gradient header */
+    color: white;
+    border-bottom: 5px solid #ff99cc; /* Border at the bottom of the header */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(255, 77, 136, 0.7); /* Text shadow for header */
+}
+
+/* Tabs Styling */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.tab-button {
+    padding: 20px 50px;
+    background: linear-gradient(135deg, #ff80aa, #ff99cc); /* Gradient button background */
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    border-radius: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 128, 170, 0.6); /* Pink shadow */
+}
+
+.tab-button:hover {
+    background: linear-gradient(135deg, #ff99cc, #ff80aa); /* Reverse gradient on hover */
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 77, 136, 0.7); /* Darker shadow on hover */
+}
+
+.tab-button:active {
+    transform: scale(1.05);
+}
+
+/* Content Sections */
+.content {
+    display: none;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 77, 136, 0.3); /* Pink shadow for content boxes */
+    background: linear-gradient(135deg, #ffe6f0, #ffccf2); /* Gradient background for content */
+}
+
+#flowers:target, #letters:target, #pictures:target {
+    display: block;
+}
+
+/* Images */
+img {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 77, 136, 0.4); /* Pink shadow for images */
+}
+
+/* Adding a subtle animation to the header and buttons */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.header {
+    animation: pulse 2s infinite;
+}
+
+.tab-button {
+    animation: pulse 3s infinite;
+}
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
